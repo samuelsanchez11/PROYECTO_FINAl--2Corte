@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento de Historial Médico</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/historial.js"></script> 
+</head>
+<body>
+
+    <header>
+        <h1>Seguimiento de Historial Médico</h1>
+    </header>
+
+    <main>
+        <h2>Formulario de Historial Médico</h2>
+
+        <form id="formularioHistorial">
+            <label for="fechaConsulta">Fecha de Consulta:</label>
+            <input type="date" id="fechaConsulta" name="fechaConsulta" required>
+
+            <label for="diagnostico">Diagnóstico:</label>
+            <textarea id="diagnostico" name="diagnostico" required></textarea>
+
+            <label for="tratamiento">Tratamiento:</label>
+            <textarea id="tratamiento" name="tratamiento"></textarea>
+
+            <label for="notas">Notas Adicionales:</label>
+            <textarea id="notas" name="notas"></textarea>
+
+            <label for="adjunto">Adjuntar Archivos (PDF/JPG):</label>
+            <input type="file" id="adjunto" name="adjunto" accept=".pdf,.jpg,.jpeg,.png">
+
+            <button type="submit">Guardar Historial Médico</button>
+        </form>
+
+        <div id="mensajeExito" class="hidden">
+            Historial médico guardado exitosamente.
+        </div>
+
+        <h2>Historial Médico de Pacientes</h2>
+        <table id="tablaHistoriales" class="hidden">
+            <thead>
+                <tr>
+                    <th>ID Historial</th>
+                    <th>Fecha de Consulta</th>
+                    <th>Diagnóstico</th>
+                    <th>Tratamiento</th>
+                    <th>Notas Adicionales</th>
+                    <th>Adjuntos</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>Seguimiento de Historial Médico</p>
+    </footer>
+</body>
+</html>

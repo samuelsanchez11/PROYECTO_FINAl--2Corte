@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../recursos/img2.jpg");
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;  
+    align-items: center; 
+    min-height: 100vh;  
+}
+
+header {
+    background-color: #004d99;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 60%;  
+    max-width: 1200px;  
+    margin: 0;  
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    width: 60%; 
+    max-width: 1200px; 
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;  
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="text"], input[type="date"], input[type="email"], input[type="tel"], input[type="password"] {
+    width: 100%;
+}
+
+button {
+    background-color:  #004d99;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color:  #004d99;
+}
+
+#mensajeExito {
+    text-align: center;
+    color:  #004d99;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td {
+    background-color: #fafafa;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #7f8c8d;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+

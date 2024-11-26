@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../recursos/img.webp'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
+
+header {
+    background-color: 0;
+    color: black;
+    padding: 10px 20px;
+    display: flex;
+flex-direction: column;
+    position: relative;
+    padding-top: 20px;
+    align-items: center;
+}
+
+header .logo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.menu-buttons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.menu-toggle {
+    background-color: #006bb3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    min-width: 150px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background-color: #00509e;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    background-color: #004d99;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    top: 90px;
+    left: 20px;
+    width: 250px;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.menu.show {
+    display: block;
+}
+
+.menu li {
+    padding: 12px;
+    text-align: center;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: #006bb3;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: 0;
+    color: black;
+    text-align: justify;
+    padding: 70px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+

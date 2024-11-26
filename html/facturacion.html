@@ -1,0 +1,76 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturación y Gestión de Pagos</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/facturacion.js" defer></script> 
+</head>
+<body>
+
+    <header>
+        <h1>Gestión de Facturación y Pagos</h1>
+    </header>
+
+    <main>
+        <h2>Generar Factura</h2>
+
+        <form id="formularioFactura">
+            <label for="monto">Monto para Pagar:</label>
+            <input type="number" id="monto" name="monto" required>
+
+            <label for="metodoPago">Método de Pago:</label>
+            <select id="metodoPago" name="metodoPago" required>
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta</option>
+                <option value="transferencia">Transferencia</option>
+            </select>
+
+            <label for="estadoPago">Estado de Pago:</label>
+            <select id="estadoPago" name="estadoPago" required>
+                <option value="pendiente">Pendiente</option>
+                <option value="pagado">Pagado</option>
+                <option value="anulado">Anulado</option>
+            </select>
+
+            <label for="concepto">Concepto del Servicio:</label>
+            <textarea id="concepto" name="concepto" required></textarea>
+
+            <label for="descuento">Descuento (si aplica):</label>
+            <input type="number" id="descuento" name="descuento" step="0.01" max="100">
+
+            <button type="submit">Generar Factura</button>
+        </form>
+
+        <div id="mensajeExito" class="hidden">
+            Factura generada exitosamente.
+        </div>
+
+        <h2>Facturas Generadas</h2>
+        <table id="tablaFacturas" class="hidden">
+            <thead>
+                <tr>
+                    <th>ID Factura</th>
+                    <th>Monto</th>
+                    <th>Fecha de Emisión</th>
+                    <th>Método de Pago</th>
+                    <th>Estado de Pago</th>
+                    <th>Concepto</th>
+                    <th>Descuento</th>
+                    <th>Fecha de Vencimiento</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>Sistema de Facturación y Pagos</p>
+    </footer>
+
+</body>
+</html>

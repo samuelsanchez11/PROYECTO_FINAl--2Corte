@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Especialidades Médicas</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/gestionespecialidades.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Especialidades Médicas</h1>
+    </header>
+
+    <main>
+        <form id="registroEspecialidad" onsubmit="return validarFormulario(event)">
+            <h2>Registrar Especialidad Médica</h2>
+            
+            <label for="nombreEspecialidad">Nombre de la Especialidad:</label>
+            <select id="nombreEspecialidad" name="nombreEspecialidad" required>
+                <option value="">Seleccionar Especialidad</option>
+                <option value="Cardiología">Cardiología</option>
+                <option value="Pediatría">Pediatría</option>
+                <option value="Neurología">Neurología</option>
+                <option value="Oncología">Oncología</option>
+                <option value="Dermatología">Dermatología</option>
+                <option value="Oftalmología">Oftalmología</option>
+            </select>
+            
+            <label for="descripcion">Descripción de la Especialidad:</label>
+            <textarea id="descripcion" name="descripcion"></textarea>
+            
+            <label for="estado">Estado de la Especialidad:</label>
+            <select id="estado" name="estado" required>
+                <option value="activa">Activa</option>
+                <option value="inactiva">Inactiva</option>
+            </select>
+            
+            <button type="submit">Registrar Especialidad</button>
+        </form>
+        <br>
+        <div id="mensajeExito" class="hidden">
+            <p>¡Especialidad registrada con éxito!</p>
+        </div>
+
+        <h3>Lista de Especialidades Registradas</h3>
+        <table id="tablaEspecialidades">
+            <thead>
+                <tr>
+                    <th>Especialidad</th>
+                    <th>Descripción</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </main>
+
+    <footer>2024 Gestion Especialidades</footer>
+
+   
+
+</body>
+</html>

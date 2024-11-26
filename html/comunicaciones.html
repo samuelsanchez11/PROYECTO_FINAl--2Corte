@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicación entre Pacientes y Médicos</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/comunicacion.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Comunicación entre Pacientes y Personal Médico</h1>
+    </header>
+    <main>
+        <h2>Enviar un Mensaje</h2>
+        <form id="formularioMensaje">
+            <label for="remitente">Remitente</label>
+            <input type="text" id="remitente" required>
+
+            <label for="destinatario">Destinatario</label>
+            <input type="text" id="destinatario" required>
+
+            <label for="contenido">Contenido del Mensaje</label>
+            <textarea id="contenido" required></textarea>
+
+            <label for="estado">Estado del Mensaje</label>
+            <select id="estado" required>
+                <option value="no leído">No leído</option>
+                <option value="leído">Leído</option>
+            </select>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+
+        <h2>Mensajes</h2>
+        <table id="tablaMensajes" class="hidden">
+            <thead>
+                <tr>
+                    <th>ID Mensaje</th>
+                    <th>Remitente</th>
+                    <th>Destinatario</th>
+                    <th>Fecha y Hora</th>
+                    <th>Contenido</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <div id="mensajeExito" class="hidden">
+            <p>¡Mensaje enviado exitosamente!</p>
+        </div>
+    </main>
+    <footer>
+        <p>Comunicación Médica</p>
+    </footer>
+</body>
+</html>

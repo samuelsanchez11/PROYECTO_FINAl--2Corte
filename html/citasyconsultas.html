@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Citas Médicas</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/citasyconsultas.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Gestión de Citas Médicas</h1>
+    </header>
+
+    <main>
+        <h2>Formulario de Cita Médica</h2>
+
+        <form id="formularioCita">
+            <label for="fechaHora">Fecha y Hora de la Cita:</label>
+            <input type="datetime-local" id="fechaHora" name="fechaHora" required>
+
+            <label for="especialidad">Especialidad Médica:</label>
+            <select id="especialidad" name="especialidad" required>
+                <option value="">Selecciona una especialidad</option>
+                <option value="Cardiología">Cardiología</option>
+                <option value="Pediatría">Pediatría</option>
+                <option value="Dermatología">Dermatología</option>
+                <option value="Ginecología">Ginecología</option>
+            </select>
+
+            <label for="medico">Médico:</label>
+            <select id="medico" name="medico" required>
+                <option value="">Selecciona un médico</option>
+                <option value="Dr. Pérez">Dr. Pérez</option>
+                <option value="Dr. Gómez">Dr. Gómez</option>
+                <option value="Dra. Sánchez">Dra. Sánchez</option>
+                <option value="Dr. Ruiz">Dr. Ruiz</option>
+            </select>
+
+            <label for="estadoCita">Estado de la Cita:</label>
+            <select id="estadoCita" name="estadoCita" required>
+                <option value="programada">Programada</option>
+                <option value="completada">Completada</option>
+                <option value="cancelada">Cancelada</option>
+            </select>
+
+            <label for="motivoConsulta">Motivo de la Consulta:</label>
+            <textarea id="motivoConsulta" name="motivoConsulta"></textarea>
+
+            <button type="submit">Agendar Cita</button>
+        </form>
+
+        <div id="mensajeExito" class="hidden">
+            Cita agendada exitosamente.
+        </div>
+
+        <h2>Citas Registradas</h2>
+        <table id="tablaCitas" class="hidden">
+            <thead>
+                <tr>
+                    <th>Fecha y Hora</th>
+                    <th>Especialidad</th>
+                    <th>Médico</th>
+                    <th>Estado</th>
+                    <th>Motivo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>Gestión de Citas Médicas</p>
+    </footer>
+
+</body>
+</html>
